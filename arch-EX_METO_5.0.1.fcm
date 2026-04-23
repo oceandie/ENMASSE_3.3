@@ -50,7 +50,7 @@
 %CPP                 cpp -Dkey_nosignedzero
 %FC                  ftn
 
-%FCFLAGS             -s real64 -s integer32 -em -hvector0 -Ovector0 -M878 -h heap_allocate -N 1023
+%FCFLAGS             -em -s integer32 -s real64 -O0,vector0 -hvector0 -hfp0 -hflex_mp=intolerant -h omp -N 1023 -M878 heap_allocate -eCID
 %FFLAGS              %FCFLAGS
 
 %LD                  ftn
