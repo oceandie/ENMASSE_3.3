@@ -1,7 +1,7 @@
 #!/bin/bash --login
 
 #PBS -N domcfg
-#PBS -l walltime=00:30:00
+#PBS -l walltime=00:10:00
 #PBS -q collab
 #PBS -l select=1
 #PBS -P other
@@ -13,7 +13,7 @@ cd $PBS_O_WORKDIR
 ulimit -c unlimited
 ulimit -s unlimited
 
-NEMO_N=4
+NEMO_N=1
 XIOS_N=1
 
 echo " mpiexec --cpu-bind=depth -n $NEMO_N -d 1 ./make_domain_cfg.exe"
