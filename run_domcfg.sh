@@ -2,8 +2,8 @@
 
 #PBS -N domcfg
 #PBS -l walltime=00:10:00
-#PBS -q collab
-#PBS -l select=1
+#PBS -q normal
+#PBS -l select=1:ncpus=256:coretype=genoa
 #PBS -P other
 
 export PBS_O_WORKDIR=$(readlink -f $PBS_O_WORKDIR)
