@@ -26,7 +26,7 @@ with open ('run_nemo.sh', 'w') as rsh:
 #PBS -l select={tot_nodes}:ncpus=256:coretype=genoa
 #PBS -P other
 
-source ~/NEMO/load_hpc_modules_xios3.sh
+source ~/NEMO/load_hpc_modules_xios3_gnu.sh
 
 export PBS_O_WORKDIR=$(readlink -f $PBS_O_WORKDIR)
 export OMP_NUM_THREADS=1
